@@ -1,0 +1,152 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form-inline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 500px;
+  min-width: 400px;
+  background: transparent;
+}
+
+.form-inline .form-control {
+  min-width: 80%;
+  width: 50%;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  color: black;
+}
+
+.form-inline .form-control:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+.stack-logo-btn {
+  width: auto;
+  background: url("../img/search-icons/stack-overflow.svg");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center center;
+  padding: 5px 15px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.google-logo-btn {
+  width: auto;
+  background: url("../img/search-icons/icons8-google.svg");
+  background-repeat: no-repeat;
+  background-size: 22px;
+  background-position: center center;
+  padding: 5px 15px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.youtube-logo-btn {
+  width: auto;
+  background: url("../img/search-icons/icons8-play-button.svg");
+  background-repeat: no-repeat;
+  background-size: 22px;
+  background-position: center center;
+  padding: 5px 15px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.dropdown-toggle {
+  padding: 5px 4px;
+  background: transparent;
+}
+
+.dropdown-menu {
+  top: 43px;
+}
+
+.dropdown-menu p {
+  padding: 0 6px;
+  font-size: 12px;
+}
+
+.dropdown-menu .dropdown-item {
+  width: 100%;
+  height: auto;
+  padding: 6px;
+  margin: 4px 0;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.dropdown-menu .dropdown-item img {
+  width: 20px;
+  height: 100%;
+  padding: 0;
+}
+
+.dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus, .dropdown-menu .dropdown-item:active {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.google-form {
+  display: none;
+}
+
+.youtube-form {
+  display: none;
+}
+
+.row {
+  margin: 0;
+}
+
+.grid-ctn {
+  width: auto;
+  max-width: auto;
+  height: auto;
+}
+
+.card {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  width: 19rem;
+  max-width: 300px;
+  border-radius: 0;
+  background: #f9f9f9;
+  -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  height: 130px;
+}
+
+.card a {
+  color: brown;
+}
+/*# sourceMappingURL=style.css.map */
