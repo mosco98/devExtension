@@ -26,6 +26,7 @@ body {
   width: 500px;
   min-width: 400px;
   background: transparent;
+  background: #f9f9f9;
 }
 
 .form-inline .form-control {
@@ -35,6 +36,7 @@ body {
   border: none;
   font-size: 14px;
   color: black;
+  background: #f9f9f9;
 }
 
 .form-inline .form-control:focus {
@@ -85,6 +87,7 @@ body {
 
 .dropdown-menu {
   top: 43px;
+  background: #f9f9f9;
 }
 
 .dropdown-menu p {
