@@ -24,7 +24,7 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 500px;
-  min-width: 400px;
+  min-width: 300px;
   background: transparent;
   background: #f9f9f9;
 }
@@ -128,13 +128,12 @@ body {
   margin: 0;
 }
 
-.grid-ctn {
-  width: auto;
-  max-width: auto;
-  height: auto;
+#blog .container {
+  max-width: 1000px;
 }
 
 .card {
+  margin-right: 10px;
   margin-bottom: 25px;
   cursor: pointer;
   border-radius: 4px;
