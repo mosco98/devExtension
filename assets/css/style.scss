@@ -11,6 +11,7 @@
   src: url('../fonts/Karla-Regular.ttf')
 }
 
+
 body {
   display: flex;
   flex-direction: column;
@@ -20,22 +21,6 @@ body {
   min-height: 100vh;
   font-family: Karla;
 }
-.main {
-  display: none;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-.time {
-  top: 0;
-  right: 0;
-  font-size: 37px;
-  font-weight: bold;
-  padding: 0px;
-  margin: 0 5px;
-  z-index: 1000;
-}
-
-
 .loader {
   display: flex;
   align-items: center;
@@ -56,6 +41,23 @@ body {
       -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
   }
 }
+.main {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.time {
+  top: 0;
+  right: 0;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 0px;
+  margin: 0 5px;
+  z-index: 1000;
+}
+
+
+
 
 .form-inline {
   display: flex;

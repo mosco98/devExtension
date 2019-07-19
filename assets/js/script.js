@@ -167,7 +167,7 @@ function startDate() {
   var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   var year = today.getFullYear();
-  myDate.innerHTML = days[today.getDay()] + "/" + months[today.getMonth()] + "/" + year;
+  myDate.innerHTML = days[today.getDay()] + " " + today.getDate() + ", " + months[today.getMonth()] + " " + year + ".";
 }
 
 startDate();
