@@ -1,10 +1,17 @@
-// Window Load
+// Loader 
+const loader = document.querySelector('.loader');
+const main = document.querySelector('.main');
 
-window.addEventListener("load", function(){
-  document.body.className += ' fade-in';
-});
+function init() {
+  setTimeout(() => {
+    loader.style.opacity = 0;
+    loader.style.display = 'none';
 
-// Toggling Search Engines
+    main.style.display = 'block';
+    setTimeout(() => main.style.opacity = 1, 50);
+  }, 1000)
+}
+
 
 // Search Forms
 
@@ -125,7 +132,7 @@ function submitGoogleForm(e) {
 
 
 googleForm.addEventListener("submit", submitGoogleForm);
-googleLogoBtn.addEventListener("click", submitStackForm);
+googleLogoBtn.addEventListener("click", submitGoogleForm);
 
 function submitYoutubeForm(e) {
   e.preventDefault();
@@ -146,4 +153,80 @@ function submitYoutubeForm(e) {
 }
 
 youtubeForm.addEventListener("submit", submitYoutubeForm);
-youtubeLogoBtn.addEventListener("click", submitStackForm);
+youtubeLogoBtn.addEventListener("click", submitYoutubeForm);
+
+
+
+// Time and Date
+const myDate = document.querySelector('.date');
+const myTime = document.querySelector('.time');
+
+// Date
+function startDate() {
+  let today = new Date();
+  var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var year = today.getFullYear();
+  myDate.innerHTML = days[today.getDay()] + "/" + months[today.getMonth()] + "/" + year;
+}
+
+startDate();
+
+// Time
+
+function startTime() {
+  let today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  var time = ('0' + h).slice(-2) + ":" + ('0' + m).slice(-2) + ":" + ('0' + s).slice(-2);
+  myTime.innerHTML = time;
+    if(startTime) {
+      startDate()
+    }
+}
+
+startTime();
+setInterval(startTime, 1000);
+
+
+// Blog Posts Fetch
+
+const devPosts = (article) => {
+  fetch(article)
+        .then((res) => res.json())
+        .then((post) => {
+          const gridCtn = document.querySelector('.grid-ctn');
+          let output = '';
+          post.forEach(function(post){
+            output += `
+            <div class="col-sm">
+            <div class="card border shadow mb-4 ml-auto mr-auto" title="Blog post" >
+              <img src= ${post.image} alt="...">
+              <div class="card-body">
+                <h5 class="card-title">${post.name}</h5>
+                <a href=${post.url} class="read-post-btn text-muted">Read post >></a>
+              </div>
+            </div>
+          </div>
+            `
+          });
+          gridCtn.innerHTML = output;
+        })
+}
+
+// To the top button
+
+const upBtn = document.querySelector('.up-btn');
+const gridWrapper = document.querySelector('.grid-wrapper');
+
+upBtn.addEventListener('click', function(){
+  gridWrapper.scrollTop = 0;
+});
+
+// Window Load
+window.addEventListener("load", function(){
+  devPosts('articles1.json');
+  init();
+});
+

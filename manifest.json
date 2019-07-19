@@ -1,6 +1,6 @@
 {
   "name": "DevScreen",
-  "description": "Designed for Web Developers with customized search engines and easy access to sites Developers use everyday",
+  "description": "Designed for Web Developers with customized search engines and Daily Posts from Top Dev Blogs",
   "manifest_version": 2,
   "version": "1.0.0",
   "chrome_url_overrides": {
@@ -11,6 +11,10 @@
       "background.js"
     ],
     "persistent": false
+  },
+  "icons": {"128": "icon_128.png"},
+  "browser_action": {
+    "default_icon": "icon.png"
   },
   "content_scripts": [
     {
