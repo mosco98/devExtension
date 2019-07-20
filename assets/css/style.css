@@ -195,12 +195,49 @@ body {
   display: none;
 }
 
+.spinner-loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 17px;
+}
+
+.spinner-loader p::after {
+  content: "\2026";
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  -webkit-animation: dots steps(4, end) 2s infinite;
+          animation: dots steps(4, end) 2s infinite;
+  width: 0px;
+}
+
+@-webkit-keyframes dots {
+  to {
+    width: 1.25em;
+  }
+}
+
+@keyframes dots {
+  to {
+    width: 1.25em;
+  }
+}
+
 .grid-wrapper {
   scroll-behavior: smooth;
+  -webkit-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
 }
 
 .grid-ctn {
-  width: 80%;
+  width: 65%;
   margin: 0 auto;
 }
 
@@ -228,14 +265,18 @@ body {
 #blog .up-btn {
   clear: both;
   cursor: pointer;
-  font-size: 30px;
-  border-radius: 6px;
+  font-size: 25px;
+  border-radius: 4px;
   width: 30px;
   height: 30px;
-  text-align: center;
   -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
           box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   background: rgba(204, 169, 44, 0.4);
+}
+
+.card-ctn {
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 .card {
@@ -278,8 +319,12 @@ body {
   font-family: Karla;
 }
 
+footer {
+  background: white;
+}
+
 footer .date {
-  font-size: 14px;
+  font-size: 13px;
   margin: 0 5px;
   font-weight: bolder;
   letter-spacing: 1px;

@@ -9,7 +9,7 @@ function init() {
 
     main.style.display = 'block';
     setTimeout(() => main.style.opacity = 1, 50);
-  }, 2000)
+  }, 1500)
 }
 
 
@@ -192,15 +192,37 @@ setInterval(startTime, 1000);
 
 // Blog Posts Fetch
 
-const devPosts = (article) => {
-  fetch(article)
-        .then((res) => res.json())
+const gridWrapper = document.querySelector('.grid-wrapper');
+const spinner = document.querySelector('.spinner-loader');
+
+const devPosts = () => {
+  gridWrapper.style.display = 'none';
+  gridWrapper.style.opacity = 0;
+  const uri = 'https://quiet-bayou-45541.herokuapp.com/';
+  let h = new Headers();
+  h.append('Content-Type', 'application/json');
+  let req = new Request(uri, {
+    method: 'GET',
+    headers: h,
+    mode: 'cors'
+  });
+
+  fetch(req)
+        .then((res) => {
+          if(res.ok) {
+            spinner.style.display = 'none';
+            spinner.style.opacity = 0;
+            gridWrapper.style.display = 'block';
+            setTimeout(() => gridWrapper.style.opacity = 1, 50);
+            return res.json();
+          }
+        })
         .then((post) => {
           const gridCtn = document.querySelector('.grid-ctn');
           let output = '';
           post.forEach(function(post){
             output += `
-            <div class="col-sm">
+            <div class="col-sm card-ctn">
             <div class="card border shadow mb-4 ml-auto mr-auto" title="Blog post" >
               <img src= ${post.image} alt="...">
               <div class="card-body">
@@ -213,12 +235,16 @@ const devPosts = (article) => {
           });
           gridCtn.innerHTML = output;
         })
+        .catch((err) => {
+            spinner.innerHTML = err.message + "." + " " + "Please Check Network Settings and Refresh Browser";
+        });
+        
 }
 
 // To the top button
 
 const upBtn = document.querySelector('.up-btn');
-const gridWrapper = document.querySelector('.grid-wrapper');
+
 
 upBtn.addEventListener('click', function(){
   gridWrapper.scrollTop = 0;
@@ -226,7 +252,9 @@ upBtn.addEventListener('click', function(){
 
 // Window Load
 window.addEventListener("load", function(){
-  devPosts('https://raw.githubusercontent.com/mosco98/devExtension/master/articles1.json');
+  devPosts();
   init();
 });
+
+setInterval(devPosts, 43200000);
 
