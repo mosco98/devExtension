@@ -1,14 +1,4 @@
 @font-face {
-  font-family: Digital;
-  src: url("../fonts/digital-7.ttf");
-}
-
-@font-face {
-  font-family: bubble;
-  src: url("../fonts/BubblegumSans-Regular.ttf");
-}
-
-@font-face {
   font-family: Karla;
   src: url("../fonts/Karla-Regular.ttf");
 }
@@ -84,7 +74,8 @@ body {
 .time {
   top: 0;
   right: 0;
-  font-size: 28px;
+  font-size: 35px;
+  letter-spacing: 5px;
   font-weight: bold;
   padding: 0px;
   margin: 0 5px;
@@ -291,6 +282,8 @@ footer .date {
   font-size: 14px;
   margin: 0 5px;
   font-weight: bolder;
+  letter-spacing: 1px;
+  white-space: nowrap;
 }
 
 footer .footer-note {

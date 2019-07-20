@@ -9,7 +9,7 @@ function init() {
 
     main.style.display = 'block';
     setTimeout(() => main.style.opacity = 1, 50);
-  }, 1000)
+  }, 2000)
 }
 
 
@@ -178,8 +178,8 @@ function startTime() {
   let today = new Date();
   var h = today.getHours();
   var m = today.getMinutes();
-  var s = today.getSeconds();
-  var time = ('0' + h).slice(-2) + ":" + ('0' + m).slice(-2) + ":" + ('0' + s).slice(-2);
+  var time = ('0' + h).slice(-2) + ":" + ('0' + m).slice(-2);
+  
   myTime.innerHTML = time;
     if(startTime) {
       startDate()
@@ -205,7 +205,7 @@ const devPosts = (article) => {
               <img src= ${post.image} alt="...">
               <div class="card-body">
                 <h5 class="card-title">${post.name}</h5>
-                <a href=${post.url} class="read-post-btn text-muted">Read post >></a>
+                <a href=${post.url} class="read-post-btn text-muted" target="_blank">Read post >></a>
               </div>
             </div>
           </div>
@@ -226,7 +226,7 @@ upBtn.addEventListener('click', function(){
 
 // Window Load
 window.addEventListener("load", function(){
-  devPosts('articles1.json');
+  devPosts('https://raw.githubusercontent.com/mosco98/devExtension/master/articles1.json');
   init();
 });
 
