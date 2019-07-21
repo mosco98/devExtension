@@ -67,8 +67,8 @@ body {
 .main {
   display: none;
   opacity: 0;
-  -webkit-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity .2s ease-in;
+  transition: opacity .2s ease-in;
 }
 
 .time {
@@ -80,6 +80,16 @@ body {
   padding: 0px;
   margin: 0 5px;
   z-index: 1000;
+}
+
+.country {
+  top: 0;
+}
+
+.country img {
+  width: 30px;
+  height: 30px;
+  opacity: .8;
 }
 
 .form-inline {
@@ -195,27 +205,29 @@ body {
   display: none;
 }
 
-.spinner-loader {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 17px;
+.message {
+  font-size: 15px;
+  display: none;
+  opacity: 0;
 }
 
-.spinner-loader p::after {
-  content: "\2026";
+.message.show {
+  display: block;
+  opacity: 1;
+}
+
+.posts-loader {
+  display: block;
+}
+
+.posts-loader::after {
+  content: '\2026';
   display: inline-block;
   overflow: hidden;
   vertical-align: bottom;
-  -webkit-animation: dots steps(4, end) 2s infinite;
-          animation: dots steps(4, end) 2s infinite;
   width: 0px;
+  -webkit-animation: dots steps(4, end) 1s infinite;
+          animation: dots steps(4, end) 1s infinite;
 }
 
 @-webkit-keyframes dots {
@@ -230,10 +242,16 @@ body {
   }
 }
 
+.fetch-error {
+  font-size: 15px;
+  display: block;
+}
+
 .grid-wrapper {
+  display: none;
   scroll-behavior: smooth;
-  -webkit-transition: opacity 1s ease-in;
-  transition: opacity 1s ease-in;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
 
 .grid-ctn {

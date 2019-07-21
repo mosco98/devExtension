@@ -12,7 +12,7 @@
     ],
     "persistent": false
   },
-  "permissions": ["https://quiet-bayou-45541.herokuapp.com/"],
+  "permissions": [],
   "icons": {"128": "icon_128.png"},
   "browser_action": {
     "default_icon": "icon.png"

@@ -15,6 +15,9 @@
   </div>
   <!-- main-content -->
   <div class="main w-100 h-75">
+    <!-- country -->
+    <div class="country position-fixed p-2">
+    </div>
       <!-- time -->
   <div class="time position-fixed text-center">
   </div>
@@ -91,16 +94,20 @@
     </form>
   </nav>
   <!-- End of Search Bars -->
-  <!-- Spinner for Grid Section -->
-    <div class="spinner-loader mt-8 w-25 ml-auto mr-auto text-center text-muted">
-      <p>Loading</p>
-    </div>
+  <!-- loader for fetching posts -->
+  <span class="message mr-auto ml-auto mt-7 text-muted text-center">
+    
+  </span>
+  <!-- error display -->
+  <!-- <div class="fetch-error mr-auto ml-auto mt-7 text-muted text-center">
+    Couldn't Load. <br> Check Your Network And Refresh Browser
+  </div> -->
   <!-- Grids Section -->
   <section class="mt-auto container grid-wrapper" id="blog">
     <div class="row justify-content-md-center grid-ctn mt-4">
     </div>
     <!-- go to top Button -->
-    <p class="ml-auto mr-auto shadow d-flex align-items-center justify-content-center up-btn" title="Go to Top">&#8593;</p>
+    <p class="ml-auto mr-auto d-flex align-items-center justify-content-center up-btn" title="Go to Top">&#8593;</p>
   </section>
 
   <!-- Footer -->
