@@ -84,6 +84,7 @@ body {
 
 .country {
   top: 0;
+  margin: 3px 0;
 }
 
 .country img {
