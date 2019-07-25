@@ -161,6 +161,7 @@ youtubeLogoBtn.addEventListener("click", submitYoutubeForm);
 // Time and Date
 const myDate = document.querySelector('.date');
 const myTime = document.querySelector('.time');
+const myGreeting = document.querySelector('.greeting');
 
 // Date
 function startDate() {
@@ -184,6 +185,15 @@ function startTime() {
   myTime.innerHTML = time;
     if(startTime) {
       startDate()
+    };
+    if(h <= 11) {
+      myGreeting.innerHTML = "Good Morning there!"
+    }; 
+    if(h <= 16 && h > 11) {
+      myGreeting.innerHTML = "Good Afternoon there!"
+    };
+    if(h <= 23 && h > 16) {
+      myGreeting.innerHTML = "Good Evening there!"
     }
 }
 

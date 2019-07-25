@@ -39,14 +39,13 @@ body {
   opacity: 0;
   transition: opacity .2s ease-in;
 } 
-.time {
+.time-ctn {
   top: 0;
   right: 0;
-  font-size: 35px;
-  letter-spacing: 5px;
+  line-height: 25px;
   font-weight: bold;
   padding: 0px;
-  margin: 0 5px;
+  margin: 6px 5px;
   z-index: 1000;
 }
 .country {
