@@ -75,10 +75,13 @@ body {
   top: 0;
   right: 0;
   line-height: 25px;
-  font-weight: bold;
   padding: 0px;
   margin: 6px 5px;
   z-index: 1000;
+}
+
+.time-ctn .time {
+  font-weight: bold;
 }
 
 .country {

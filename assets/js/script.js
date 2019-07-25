@@ -192,7 +192,7 @@ function startTime() {
     if(h <= 16 && h > 11) {
       myGreeting.innerHTML = "Good Afternoon there!"
     };
-    if(h <= 23 && h > 16) {
+    if(h <= 23 && h >= 16) {
       myGreeting.innerHTML = "Good Evening there!"
     }
 }
