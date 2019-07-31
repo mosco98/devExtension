@@ -1,6 +1,6 @@
 @font-face {
-  font-family: Karla;
-  src: url("../fonts/Karla-Regular.ttf");
+  font-family: Poppins;
+  src: url("../fonts/Poppins-Regular.ttf");
 }
 
 body {
@@ -19,7 +19,7 @@ body {
           justify-content: center;
   height: 100vh;
   min-height: 100vh;
-  font-family: Karla;
+  font-family: Poppins;
 }
 
 .loader {
@@ -42,25 +42,25 @@ body {
 
 @-webkit-keyframes pulse {
   0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+    -webkit-box-shadow: 0 0 0 0 #fea226;
   }
   70% {
-    -webkit-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    -webkit-box-shadow: 0 0 0 10px #fea226;
   }
   100% {
-    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    -webkit-box-shadow: 0 0 0 0 #fea226;
   }
 }
 
 @keyframes pulse {
   0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+    -webkit-box-shadow: 0 0 0 0 #fea226;
   }
   70% {
-    -webkit-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    -webkit-box-shadow: 0 0 0 10px #fea226;
   }
   100% {
-    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    -webkit-box-shadow: 0 0 0 0 #fea226;
   }
 }
 
@@ -76,12 +76,13 @@ body {
   right: 0;
   line-height: 25px;
   padding: 0px;
-  margin: 6px 5px;
+  margin: 9px 5px;
   z-index: 1000;
 }
 
 .time-ctn .time {
   font-weight: bold;
+  letter-spacing: 5px;
 }
 
 .country {
@@ -109,7 +110,9 @@ body {
   background: transparent;
   background: #f4f4f4;
   margin-top: -60px;
-  font-family: Karla;
+  font-family: Poppins;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 .form-inline .form-control {
@@ -166,13 +169,16 @@ body {
 .dropdown-toggle {
   padding: 5px 4px;
   background: transparent;
+  color: #fea226;
 }
 
 .dropdown-menu {
   top: 43px;
   left: -92px;
-  background: #f9f9f9;
-  font-family: Karla;
+  background: #f4f4f4;
+  font-family: Poppins;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 .dropdown-menu p {
@@ -260,7 +266,7 @@ body {
 
 .grid-ctn {
   width: 65%;
-  margin: 0 auto;
+  margin: 3px auto;
 }
 
 #blog {
@@ -280,8 +286,8 @@ body {
 }
 
 #blog::-webkit-scrollbar-thumb {
-  background-color: rgba(204, 169, 44, 0.4);
-  outline: 1px solid rgba(204, 169, 44, 0.4);
+  background-color: #fea226;
+  outline: 1px solid #fea226;
 }
 
 #blog .up-btn {
@@ -291,14 +297,17 @@ body {
   border-radius: 4px;
   width: 30px;
   height: 30px;
+  color: white;
+  font-weight: bold;
   -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
           box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  background: rgba(204, 169, 44, 0.4);
+  background: #fea226;
 }
 
 .card-ctn {
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 4px;
+  padding-left: 4px;
+  border: none;
 }
 
 .card {
@@ -306,10 +315,10 @@ body {
   min-width: auto;
   cursor: pointer;
   background: black;
-  font-family: Karla;
-  border-radius: 6px;
-  -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  font-family: Poppins;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.16);
 }
 
 .card img {
@@ -325,28 +334,29 @@ body {
 .card .card-title {
   width: 100%;
   min-width: 100%;
-  height: 35px;
+  height: 44px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
-  font-size: 14.5px;
-  color: white;
-  font-family: Karla;
+  font-size: 12px;
+  color: whitesmoke;
+  font-family: Poppins;
 }
 
 .card .read-post-btn {
   font-size: 12px;
-  font-family: Karla;
+  font-family: Poppins;
 }
 
-footer {
-  background: white;
+footer a:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 footer .date {
-  font-size: 13px;
+  font-size: 11px;
   margin: 0 5px;
   font-weight: bolder;
   letter-spacing: 1px;
@@ -354,7 +364,7 @@ footer .date {
 }
 
 footer .footer-note {
-  font-size: 12px;
+  font-size: 11px;
   margin: 0 5px;
 }
 
@@ -363,8 +373,8 @@ footer .footer-note .icons-group {
 }
 
 footer .footer-note .icons-group img {
-  width: 20px;
-  height: 20px;
-  opacity: .7;
+  width: 13px;
+  height: 13px;
+  opacity: .8;
 }
 /*# sourceMappingURL=style.css.map */
