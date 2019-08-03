@@ -1229,7 +1229,7 @@ function getCountry() {
       return null;
   }
   const myCountry = findCountry(countries, "name", locationData.country);
-  countryFlag.innerHTML += `<img src=${myCountry.image} class="image-fluid" alt="">`;
+  countryFlag.innerHTML += `<img src=${myCountry.image} class="image-fluid animated slideInLeft" alt="Country FLag">`;
   localStorage.setItem("country", JSON.stringify(locationData));
   })
   
@@ -1247,7 +1247,7 @@ function getCountryOffline() {
   const locationDataLocal = localStorage.getItem("country");
   const locationDataJson = JSON.parse(locationDataLocal);
   const myCountryLocal = findCountryLocal(countries, "name", locationDataJson.country);
-  countryFlag.innerHTML += `<img src=${myCountryLocal.image} class="image-fluid" alt="">`;
+  countryFlag.innerHTML += `<img src=${myCountryLocal.image} class="image-fluid animated slideInLeft" alt="">`;
 }
 
 // Blog Posts Fetch
@@ -1270,7 +1270,7 @@ function getPosts() {
     mode: 'cors'
   });
   messageLoader.classList.add("show");
-  messageLoader.innerHTML = `<p class ="posts-loader">Checking for Posts</p>`;
+  messageLoader.innerHTML = `<p class ="posts-loader">Fetching Posts</p>`;
   gridWrapper.style.display = 'none';
   fetch(req)
   .then((res) => {
@@ -1282,12 +1282,12 @@ function getPosts() {
     let output = '';
     blogPosts.forEach((blogPost) => {
       output += `
-      <div class="col-sm card-ctn">
-      <div class="card border shadow mb-4 ml-auto mr-auto" title="Blog post" >
+      <div class="col-sm card-ctn animated fadeIn">
+      <div class="card border shadow mb-4 ml-auto mr-auto" >
         <img src= ${blogPost.image} alt="...">
         <div class="card-body">
           <h5 class="card-title">${blogPost.name}</h5>
-          <a href=${blogPost.url} class="read-post-btn text-muted" target="_blank">Read post >></a>
+          <a href=${blogPost.url} class="read-post-btn text-muted" target="_blank" title="Read Post">Read post >></a>
         </div>
       </div>
     </div>
@@ -1300,8 +1300,8 @@ function getPosts() {
   })
   .catch((err) => {
     if(err){
-      messageLoader.classList.remove("show");
-      messageLoader.innerHTML += `Couldn't Load. <br> Check Your Network And Refresh Browser`;
+      messageLoader.classList.add("show");
+      messageLoader.innerHTML = `Oops... Couldn't load. <br>Please check your network settings and refresh browser`;
       gridWrapper.style.display = "none";
     }
   })
@@ -1315,11 +1315,11 @@ function getPostsOffline() {
       let output = '';
       output += `
       <div class="col-sm card-ctn">
-      <div class="card border shadow mb-4 ml-auto mr-auto" title="Blog post" >
+      <div class="card border shadow mb-4 ml-auto mr-auto" >
         <img src= ${blogPost.image} alt="...">
         <div class="card-body">
           <h5 class="card-title">${blogPost.name}</h5>
-          <a href=${blogPost.url} class="read-post-btn text-muted" target="_blank">Read post >></a>
+          <a href=${blogPost.url} class="read-post-btn text-muted" target="_blank" title="Read Post">Read post >></a>
         </div>
       </div>
     </div>

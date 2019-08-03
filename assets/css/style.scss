@@ -69,7 +69,6 @@ body {
   justify-content: space-around;
   width: 700px;
   min-width: 300px;
-  background: transparent;
   background: #f4f4f4;
   margin-top: -60px;
   font-family: Poppins;
@@ -172,6 +171,7 @@ body {
 }
 .posts-loader{
   display: block;
+  font-size: 13px;
   &::after {
     content: '\2026';
     display: inline-block;
@@ -232,7 +232,6 @@ body {
 .card-ctn {
   padding-right: 4px;
   padding-left: 4px;
-  border: none;
 }
 
 .card {
@@ -241,7 +240,8 @@ body {
   cursor: pointer;
   background: black;
   font-family: Poppins;
-  border-radius: 4px;
+  border: 2px solid white !important;
+  box-sizing: border-box;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.16);
 
   img {
