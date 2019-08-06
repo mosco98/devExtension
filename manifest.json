@@ -1,6 +1,6 @@
 {
   "name": "DevScreen",
-  "description": "Designed for Web Developers with customized search engines and Daily Posts from Top Dev Blogs",
+  "description": "An extension designed for Web Developers with customized search engines and Daily Posts from Top Dev Blogs",
   "manifest_version": 2,
   "version": "1.0.0",
   "chrome_url_overrides": {
