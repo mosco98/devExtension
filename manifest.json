@@ -1,6 +1,7 @@
 {
-  "name": "DevScreen",
-  "description": "An extension designed for Web Developers with customized search engines and Daily Posts from Top Dev Blogs",
+  "name": "Devscreen",
+  "short_name": "devscreen",
+  "description": "Replace your new page tab with a personal dashboard featuring daily updates from top developer blogs",
   "manifest_version": 2,
   "version": "1.0.0",
   "chrome_url_overrides": {
@@ -12,7 +13,11 @@
     ],
     "persistent": false
   },
-  "permissions": ["activeTab"],
+  "permissions": [
+    "activeTab",
+    "storage",
+    "geolocation"
+  ],
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
@@ -23,6 +28,10 @@
   },
   "content_scripts": [
     {
+      "matches": [
+        "https://quiet-bayou-45541.herokuapp.com/",
+        "https://extreme-ip-lookup.com/json/"
+      ],
       "js": ["content.js"]
     }
   ]
