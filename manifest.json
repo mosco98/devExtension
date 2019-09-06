@@ -1,9 +1,10 @@
+
 {
   "name": "Devscreen",
   "short_name": "devscreen",
   "description": "Replace your new page tab with a personal dashboard featuring daily updates from top developer blogs",
   "manifest_version": 2,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
